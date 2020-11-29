@@ -1,9 +1,9 @@
 import numpy as np
 import warnings
-import jpe.errors.warnings
+import jpe.errors
 import jpe.utils.unicode.unicode
-from jpe.Jfloat import Jfloat as jfloat
-import copy
+from jpe import Jfloat as jfloatMod
+import jpe.utils.copy 
 
 class gausean:
         """ this is a utils class contining the operations or tha gaussean eliminination as well as the rifinement methode"""
@@ -53,6 +53,7 @@ class gausean:
 class linearEquasionSystem:
     def __init__(self, *val, acc=10):
         self.sublcassInit(val, acc)
+        
     def sublcassInit(self, val, acc = 10):
         # used for printout rounding donst affect calculations
         self.acc = acc
@@ -123,8 +124,9 @@ class linearEquasionSystem:
             # if ist all zeros move on
 ##            print(f"at loc{x, y} the non zeros where {nonZero_loc} while out was {gausean.scanColumb(new_sys, x)}")
 ##            print(new_sys._arr)
-            # so that _arr[y,x] != 0
-            new_sys._arr = gausean.swapEquasions(new_sys, y, nonZero_loc)
+            # so that _arr[y,x] != 0 aka swap equasions
+            if y != nonZero_loc:
+                new_sys._arr = gausean.swapEquasions(new_sys, y, nonZero_loc)
             # set every in the colum x under y to 0
             new_sys._arr = gausean.ZeroSetVals(new_sys, x, y); x+=1; y+=1
         # add last values to freeVars
@@ -211,7 +213,7 @@ class rowEdulants(linearEquasionSystem):
     def refine(self):
         "convert the system into refined row etulant form"
         if self.isRefined:
-            warnings.warn(jpe.errors.warnings.jpeRedundantCall("rowEtulants.refine call redundent, system already refined call unneaded"))
+            warnings.warn(jpe.errors.jpeRedundantCall("rowEtulants.refine call redundent, system already refined call unneaded"))
         ##new_sys = rowEdulants(self.copy(), _convert = False)
         # sort the system so its in an actual row Edulants form as the building process can mess stuf up
 ##        self._sort()
@@ -226,7 +228,7 @@ class rowEdulants(linearEquasionSystem):
         "enter eg free vals under *vals and get the other variables calculated"
         # if system has not jet been refined refine it
         if not self.isRefined:
-            warnings.warn(jpe.errors.warnings.jpeClassDataChange("call rowEtulants.getSolutionFromFreeVals has refined the system data loss posible"))
+            warnings.warn(jpe.errors.jpeClassDataChange("call rowEtulants.getSolutionFromFreeVals has refined the system data loss posible"))
             self.refine()
         # get input matrix
         inVals = np.zeros(self._arr.shape[1]-1)
@@ -246,7 +248,7 @@ class rowEdulants(linearEquasionSystem):
         "returns the solution Quantity as i matprintisch form"
         # if system hasn't been refined jet refine it
         if not self.isRefined:
-            warnings.warn(jpe.errors.warnings.jpeClassDataChange("call RowEtulants.getMathPrintSolution has refined the system data loss posible"))
+            warnings.warn(jpe.errors.jpeClassDataChange("call RowEtulants.getMathPrintSolution has refined the system data loss posible"))
             self.refine()
         #calculate the linear side thingy
         def getSide(x, y):
@@ -306,14 +308,14 @@ class _utils:
                 x, y = 0, 0
                 while x < len(system._arr[1])-1 and y < len(system._arr):
                         if x not in system.freeVariables:
-                                for xidx in range(len(system._arr[y])):
-                                    # set value to x, y to 0
+                                for xidx in reversed(range(len(system._arr[y]))):
+                                    # set value to x, y to 1
                                     system._arr[y][xidx] /= system._arr[y][x]
                                 
                                 #sett every value above y to 0    
                                 if y != 0:
                                     for equasionIdx in range(0, y):
-                                        for elementIdx in range(len(system._arr[0])):
+                                        for elementIdx in reversed(range(len(system._arr[0]))):
                                             system._arr[equasionIdx][elementIdx] -= system._arr[y][elementIdx] * system._arr[equasionIdx][x]
                                 y+=1
                         x+=1
@@ -327,7 +329,7 @@ class linearEquasionSystemJfloat:
     def _init(self, vals):
                 "subinit"
                 # is system input copy system
-                if isinstance(vals[0], linearEquasionSystemJfloat): self._arr = copy.copy(vals[0]._arr)
+                if isinstance(vals[0], linearEquasionSystemJfloat): self._arr = jpe.utils.copy.copyLists.copy(vals[0]._arr)
                 # else generate jflowt sysstem
                 elif isinstance(vals[0][0], list):
                     self._arr = linearEquasionSystemJfloat._init_arr(vals[0])
@@ -348,7 +350,7 @@ class linearEquasionSystemJfloat:
 
 
     def __getstate__(self):
-        raise jpe.errors.warnings.jpeDevFuncWarning("this function is still in development sry i u are a dev plz get to work")
+        raise jpe.errors.jpeDevFuncWarning("this function is still in development sry i u are a dev plz get to work")
 
             
     def _init_arr(vals):
@@ -361,11 +363,11 @@ class linearEquasionSystemJfloat:
                         if len(sys) != size: raise jpeInvalidSystemError("input dims dont match")
 
                         for koeffizeint in sys:
-                                arr[-1].append(jfloat(koeffizeint))
+                                arr[-1].append(jfloatMod.Jfloat(koeffizeint))
                 return arr
 
     def __copy__(self):
-        return linearEquasionSystemJfloat(copy.copy(self._arr))
+        return linearEquasionSystemJfloat(jpe.utils.copy.copyLists.copy(self._arr))
 
     def test(self, *args):
         "retusn eg solution for input variables"
@@ -403,7 +405,7 @@ class rowEtulantSystemJfloat(linearEquasionSystemJfloat):
 
         def _generateRowEtulants(system):
                 #copy the sys to prevent messups
-                arr = copy.copy(system._arr)
+                arr = jpe.utils.copy.copyLists.copy(system._arr)
                 #init scan vars
                 x, y = 0,0
                 #conains the free vars so we can keept tack of them as i dont move them to avoid the hassel of correcting the bijunction
@@ -428,7 +430,7 @@ class rowEtulantSystemJfloat(linearEquasionSystemJfloat):
                 return arr, freeVars
 
         def __copy__(self):
-            return rowEtulantSystemJfloat(copy.copy(self._arr))
+            return rowEtulantSystemJfloat(jpe.utils.copy.copyLists.copy(self._arr))
 
         def refine(self):
             """refine the system"""
@@ -438,19 +440,19 @@ class rowEtulantSystemJfloat(linearEquasionSystemJfloat):
 
         def _refine(self):
             """refine and complaine"""
-            warnings.warn(jpe.errors.warnings.jpeClassDataChange("call RowEtulants.getMathPrintSolution has refined the system data loss posible\n"))
+            warnings.warn(jpe.errors.jpeClassDataChange("call RowEtulants.getMathPrintSolution has refined the system data loss posible\n"))
             return self.refine()
 
         def _hassolution(self):
             """retuns bool value for is a solution exists"""
             # if any equasion is 0+0+..+0 != 0 ist is Fasle
             for equasion in self._arr:
-                NonZero=False
+                isZero=True
                 for element in equasion[:-1]:
                     if element != 0:
-                        nonZero=True
+                        isZero=False
                         break
-                if equasion[-1] == 0 and not NonZero:
+                if equasion[-1] != 0 and isZero:
                     return False
             return True
 
@@ -464,7 +466,6 @@ class rowEtulantSystemJfloat(linearEquasionSystemJfloat):
                 reses.append(equasion[-1])
                 # iterate over every free value and calculate the solution
                 for value, idx in zip(vals,self.freeVariables ):
-                    print(idx, value)
                     reses[-1]-= equasion[idx] * value
             return reses
 
@@ -472,10 +473,10 @@ class rowEtulantSystemJfloat(linearEquasionSystemJfloat):
             "returns the free variables as a string"
             out = "free vars: "
             for idx in self.freeVariables:
-                out += f"X{ jpe.utils.unicode.unicode.prettyIndex(idx+1)}"
+                out += f"X{ jpe.utils.unicode.unicode.prettyIndex(idx)}"
             return out
 
-        def getMathprinsSolution(self):
+        def getMathPrintSolution(self):
             # if the system is not in refied form we have to do that
             if not self.isRefined:
                     self._refine()
@@ -487,7 +488,7 @@ class rowEtulantSystemJfloat(linearEquasionSystemJfloat):
             def getSide(x, y):
                 """ put all the operants togather"""
                 string = str(self._arr[y][-1])
-                for idx in range(len(self._arr)):
+                for idx in range(len(self._arr[0])-1):
                     if idx != x and self._arr[y][idx] !=0: string += f" {'-' if self._arr[y][idx]>0 else '+'} {abs(self._arr[y][idx])} X{jpe.utils.unicode.unicode.prettyIndex(idx)}"
                 return string
 
@@ -511,9 +512,10 @@ class rowEtulantSystemJfloat(linearEquasionSystemJfloat):
 class jpeInvalidSystemError(Exception):pass
 
 if __name__ == "__main__":
-    s = linearEquasionSystemJfloat([1,2,1,3], [4,5,0,6])
-    r = rowEtulantSystemJfloat(s).refine()
-    print(r.getMathprinsSolution())
+    js = linearEquasionSystemJfloat([1,2,1,3], [4,5,0,6])
+    jr = rowEtulantSystemJfloat(js)
+    print(jr)
+    print(jr.getMathprinsSolution())
     #eingabe eines algemeine gleichungsystems als erweiterte koeffizientenmatrixs
     s = linearEquasionSystem([26,5, 10],
                              [4,5, 11],

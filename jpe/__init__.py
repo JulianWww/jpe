@@ -1,7 +1,8 @@
 from jpe.Jfloat import Jfloat as jfloat
-from jpe.random import perlinNoise
-import jpe.math.linalg
-import jpe.crono.timer as crono
+del Jfloat
+import jpe.random
+from jpe.math import linalg
+import jpe.crono
+import jpe.utils.copy
 
-
-    
+del jpe
