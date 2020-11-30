@@ -14,3 +14,7 @@ class jpeClassDataChange(jpeWarning):
 class jpeRedundantCall(jpeWarning):
     " called when a redundant things are done"
     pass
+
+class jpeCalculationAbortedWarning(jpeWarning):
+    " called when an algorythem ends calculations becuse of iteration lim rech"
+    pass

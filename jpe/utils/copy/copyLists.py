@@ -2,6 +2,7 @@ import copy as copyLib
     
 
 def copy(val):
+    """a copy operator for lists and dicst"""
     if isinstance(val, list):
         output = []
         for element in val:
