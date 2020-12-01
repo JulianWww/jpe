@@ -1,9 +1,30 @@
+"a file adding rational numbers"
+
 import math
 import jpe.math.Jmath as Jmath
 
+"""the jfloat data type representing a rational number
+    initiated by either a float, int, jfloat or string
+    float, int jfloat are self explanatory 
+    if its a stiring everything after | will be under the periode
+    """
 class Jfloat():
+    """the jfloat data type representing a rational number
+
+    initiated by either a float, int, jfloat or string
+    float, int jfloat are self explanatory 
+    if its a stiring everything after | will be under the periode"""
     
     def __init__(self, val, N=None): ## input val as 123.456|678 | commences periode
+        """the jfloat data type representing a rational number
+
+        initiated by either a float, int, jfloat or string
+        float, int jfloat are self explanatory 
+        if its a stiring everything after | will be under the periode"""
+        self.x=1
+        "the val of the rational number type is int"
+        self.n=1
+        "the denumerator of the rational number type is int"
 
         if N is None:
             self.n, self.x = self._getCo(val)
@@ -14,9 +35,20 @@ class Jfloat():
 
 
     def _getCo(self, val):
+        """calculate koefficents form val and tan simplify it
+        @param val: variable containing the value we want to convert to coefficints.
+        @type val: int, float, string.
+
+        @return: tupple (int enumerator, int demumerator)."""
         return self._simplify(self._getCo_2(val))
 
     def _simplify(self, co):
+        """simplify than coefficents
+
+        a function that simplifies the coefficents
+        @param co: the values to be simplified using the greatest common denomenator from the math value
+        @type co: tupple(int enumerator, int denumerator)
+        @return: tupple(int enumerator, int denumerator) simplified koefficents"""
         n, x = co
         gcd = math.gcd(x, n)
         if n < 0: x, n = -x, -n
@@ -120,8 +152,8 @@ class Jfloat():
 
     def __trunc__(self):
         if self < 0:
-            return __ciel__()
-        return __floot__()
+            return self.__ciel__()
+        return self.__floot__()
     
         
 
@@ -274,8 +306,6 @@ class Jfloat():
     def __copy__(self):
         return Jfloat(self.x, self.n)
 
-    def __deepcopy__(self):
-        return self
 
 ## _____________________________________________________
 
@@ -287,6 +317,7 @@ class Jfloat():
 
 
 def _convertToJfloat(num):
+    "converts an input to jfloat"
     if isinstance(num, Jfloat):
         return num
 

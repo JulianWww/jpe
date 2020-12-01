@@ -1,8 +1,9 @@
+"the jpe library"
 from jpe.Jfloat import Jfloat as jfloat
 del Jfloat
 import jpe.random
-from jpe.math import linalg
+import jpe.math
 import jpe.crono
-import jpe.utils.copy
+import jpe.utils
 
 del jpe
