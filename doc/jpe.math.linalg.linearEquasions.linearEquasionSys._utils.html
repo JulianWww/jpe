@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>jpe.math.linalg.linearEquasions.linearEquasionSys._utils : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            jpe API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class private"><code>jpe.math.linalg.linearEquasions.linearEquasionSys._utils</code> <small>class documentation</small></h1>
+
+        <span id="partOf">
+          Part of <code><a href="jpe.html" class="code" data-type="Package">jpe</a>.<a href="jpe.math.html" class="code" data-type="Package">math</a>.<a href="jpe.math.linalg.html" class="code" data-type="Package">linalg</a>.<a href="jpe.math.linalg.linearEquasions.html" class="code" data-type="Package">linearEquasions</a>.<a href="jpe.math.linalg.linearEquasions.linearEquasionSys.html" class="code" data-type="Module">linearEquasionSys</a></code>
+          
+          <a href="classIndex.html#jpe.math.linalg.linearEquasions.linearEquasionSys._utils">(View In Hierarchy)</a>
+        </span>
+      </div>
+
+      <div class="extrasDocstring">
+        
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>this is a utils class contining the operations or tha gaussean eliminination as well as the rifinement methode for accurate systems</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id23">
+  
+  <tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><a href="jpe.math.linalg.linearEquasions.linearEquasionSys._utils.html#swapEquasions" class="code" data-type="Static Method">swapEquasions</a></td>
+    <td><span>swaps equasions at postions idxA, idxB</span></td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><a href="jpe.math.linalg.linearEquasions.linearEquasionSys._utils.html#scanColumb" class="code" data-type="Static Method">scanColumb</a></td>
+    <td><span>search for non zero elemnts scans all equasions at index idx to find witch of them are dont have 0s at this position</span></td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><a href="jpe.math.linalg.linearEquasions.linearEquasionSys._utils.html#refine" class="code" data-type="Static Method">refine</a></td>
+    <td><span>set values under stair to 0 using the 3rd gaussean operation we set all the coefficents under topColum for variable var to 0</span></td>
+  </tr><tr class="staticmethod private">
+    
+    <td>Static Method</td>
+    <td><a href="jpe.math.linalg.linearEquasions.linearEquasionSys._utils.html#_setValsTo0" class="code" data-type="Static Method">_setValsTo0</a></td>
+    <td><span>set values under stair to 0 using the 3rd gaussean operation we set all the coefficents under topColum for variable var to 0</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basestaticmethod">
+  
+  <a name="jpe.math.linalg.linearEquasions.linearEquasionSys._utils.swapEquasions">
+    
+  </a>
+  <a name="swapEquasions">
+    
+  </a>
+  <div class="functionHeader">
+    @staticmethod<br />
+    def
+    swapEquasions(arr, idxA, idxB):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>swaps equasions at postions idxA, idxB</p></div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  <a name="jpe.math.linalg.linearEquasions.linearEquasionSys._utils.scanColumb">
+    
+  </a>
+  <a name="scanColumb">
+    
+  </a>
+  <div class="functionHeader">
+    @staticmethod<br />
+    def
+    scanColumb(arr, x, y):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>search for non zero elemnts scans all equasions at index idx to find witch of them are dont have 0s at this position</p></div>
+  </div>
+</div><div class="basestaticmethod private">
+  
+  <a name="jpe.math.linalg.linearEquasions.linearEquasionSys._utils._setValsTo0">
+    
+  </a>
+  <a name="_setValsTo0">
+    
+  </a>
+  <div class="functionHeader">
+    @staticmethod<br />
+    def
+    _setValsTo0(arr, x, y):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>set values under stair to 0 using the 3rd gaussean operation we set all the coefficents under topColum for variable var to 0</p></div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  <a name="jpe.math.linalg.linearEquasions.linearEquasionSys._utils.refine">
+    
+  </a>
+  <a name="refine">
+    
+  </a>
+  <div class="functionHeader">
+    @staticmethod<br />
+    def
+    refine(system):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>set values under stair to 0 using the 3rd gaussean operation we set all the coefficents under topColum for variable var to 0</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for jpe, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> at 2020-12-01 13:10:49.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

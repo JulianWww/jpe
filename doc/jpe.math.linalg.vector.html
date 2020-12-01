@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>jpe.math.linalg.vector : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            jpe API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code>jpe.math.linalg.vector</code> <small>module documentation</small></h1>
+
+        <span id="partOf">
+          Part of <code><a href="jpe.html" class="code" data-type="Package">jpe</a>.<a href="jpe.math.html" class="code" data-type="Package">math</a>.<a href="jpe.math.linalg.html" class="code" data-type="Package">linalg</a></code>
+          
+          
+        </span>
+      </div>
+
+      <div class="extrasDocstring">
+        
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>a vector implementation</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id27">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="jpe.math.linalg.vector.html#jVectorTypeErrorMessage" class="code" data-type="Function">jVectorTypeErrorMessage</a></td>
+    <td><span>raise invalid other variable operation error</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="jpe.math.linalg.vector.html#dot" class="code" data-type="Function">dot</a></td>
+    <td><span>vector dot product</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="jpe.math.linalg.vector.html#cross" class="code" data-type="Function">cross</a></td>
+    <td><span>vector cross product</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="jpe.math.linalg.vector.html#getAngle" class="code" data-type="Function">getAngle</a></td>
+    <td><span>compute the angle between 2 vectors</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="jpe.math.linalg.vector.html#det" class="code" data-type="Function">det</a></td>
+    <td><span>computes the deteminant of the vector</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="jpe.math.linalg.vector.html#resultingForce" class="code" data-type="Function">resultingForce</a></td>
+    <td><span>calculates the resulting force crated by a set of vecors acting on the same point</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="jpe.math.linalg.vector.vector.html" class="code" data-type="Class">vector</a></td>
+    <td><span>a vector data type</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="jpe.math.linalg.vector.jVectorTypeErrorMessage">
+    
+  </a>
+  <a name="jVectorTypeErrorMessage">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    jVectorTypeErrorMessage(other, operation):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>raise invalid other variable operation error</p><p>error type is TypeErorr with message jpe.math.linalg.vector dosnt suport {operation} operation with values of type {type(other)}...</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">operation</td><td>witchoperation raised the error (type: string)</td></tr><tr><td></td><td class="fieldArg">other</td><td>the other variable that the operation was performed with (type: object aka any)</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="jpe.math.linalg.vector.dot">
+    
+  </a>
+  <a name="dot">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dot(u, v):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>vector dot product</p><p>computes the vector dot product of u and v</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">u</td><td>vector 1 of the dot product (type: vector)</td></tr><tr><td></td><td class="fieldArg">v</td><td>vector 2 of the dot product (type: vector)</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">a float being the dot product of the vectrors</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="jpe.math.linalg.vector.cross">
+    
+  </a>
+  <a name="cross">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cross(u, v):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>vector cross product</p><p>computes the vector cross product of u and v if invalid vector size raise a value error</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">u</td><td>vector 1 of the cross product (type: vector in 3 dimentions)</td></tr><tr><td></td><td class="fieldArg">v</td><td>vector 2 of the cross product (type: vector in 3 dimentions)</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">a vector being the dot product of the vectrors</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="jpe.math.linalg.vector.getAngle">
+    
+  </a>
+  <a name="getAngle">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getAngle(u, v):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>compute the angle between 2 vectors</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">u</td><td>one of the 2 vectors we want to calculat the angle between (type: vector)</td></tr><tr><td></td><td class="fieldArg">v</td><td>the other vector (type: vector)</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">a float being the angle calculated by math.acos</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="jpe.math.linalg.vector.det">
+    
+  </a>
+  <a name="det">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    det(v):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>computes the deteminant of the vector</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">v</td><td>the vector whoms deteminant we want to calculate (type: vector)</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">the determinant</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="jpe.math.linalg.vector.resultingForce">
+    
+  </a>
+  <a name="resultingForce">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    resultingForce(*vectors):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>calculates the resulting force crated by a set of vecors acting on the same point</p><p>mainly for physiks calculations</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">vectors</td><td>the vectors acting on the point (type: *vectors so a collection of vectors)</td></tr></table></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for jpe, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> at 2020-12-01 13:10:49.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>
