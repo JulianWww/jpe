@@ -26,7 +26,9 @@ class Factory(object):
     """
 
     def __init__(self, dimension, octaves=1, tile=(), unbias=False):
-        """Create a new Perlin noise factory in the given number of dimensions,
+        """Perlin noise factory
+
+        Create a new Perlin noise factory in the given number of dimensions,
         which should be an integer and at least 1.
         More octaves create a foggier and more-detailed noise pattern.  More
         than 4 octaves is rather excessive.
@@ -37,7 +39,9 @@ class Factory(object):
         If ``unbias`` is true, the smoothstep function will be applied to the
         output before returning it, to counteract some of Perlin noise's
         significant bias towards the center of its output range.
-        """
+
+        @param dimention: number of dimentions of the algorythem
+        @type dimention: int"""
         self.dimension = dimension
         self.octaves = octaves
         self.tile = tile + (0,) * dimension

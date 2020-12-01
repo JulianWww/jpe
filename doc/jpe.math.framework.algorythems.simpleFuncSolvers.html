@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>jpe.math.framework.algorythems.simpleFuncSolvers : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            jpe API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code>jpe.math.framework.algorythems.simpleFuncSolvers</code> <small>module documentation</small></h1>
+
+        <span id="partOf">
+          Part of <code><a href="jpe.html" class="code" data-type="Package">jpe</a>.<a href="jpe.math.html" class="code" data-type="Package">math</a>.<a href="jpe.math.framework.html" class="code" data-type="Package">framework</a>.<a href="jpe.math.framework.algorythems.html" class="code" data-type="Package">algorythems</a></code>
+          
+          
+        </span>
+      </div>
+
+      <div class="extrasDocstring">
+        
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id14">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="jpe.math.framework.algorythems.simpleFuncSolvers.html#inf" class="code" data-type="Variable">inf</a></td>
+    <td><span>infinity</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="jpe.math.framework.algorythems.simpleFuncSolvers.modes.html" class="code" data-type="Class">modes</a></td>
+    <td><span>operation modes</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="jpe.math.framework.algorythems.simpleFuncSolvers.html#testF" class="code" data-type="Function">testF</a></td>
+    <td><span>demo function</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="jpe.math.framework.algorythems.simpleFuncSolvers.html#testdf" class="code" data-type="Function">testdf</a></td>
+    <td><span>derivative of demo function</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="jpe.math.framework.algorythems.simpleFuncSolvers.html#functionType" class="code" data-type="Variable">functionType</a></td>
+    <td><span>type of function</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="jpe.math.framework.algorythems.simpleFuncSolvers.html#neuton" class="code" data-type="Function">neuton</a></td>
+    <td><span>seaks the position of a functon sothat the fun(result) = val where result is the output of this function using neuton algroythem</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="jpe.math.framework.algorythems.simpleFuncSolvers.html#intervallHalving" class="code" data-type="Function">intervallHalving</a></td>
+    <td><span>seaks the position of a functon sothat the fun(result) = val where result is the output of this function using the bisection algroythem</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="jpe.math.framework.algorythems.simpleFuncSolvers.html#monteCarloBisektion" class="code" data-type="Function">monteCarloBisektion</a></td>
+    <td><span>seaks the position of a functon so that the fun(result) = val where result is the output of this function using the bisection algroythem with random elements</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="jpe.math.framework.algorythems.simpleFuncSolvers.html#regulaFalsi" class="code" data-type="Function">regulaFalsi</a></td>
+    <td><span>estimates a solution for func(result) = val where result is the result of these function using regulaFalsi algorythem</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="jpe.math.framework.algorythems.simpleFuncSolvers.html#halley" class="code" data-type="Function">halley</a></td>
+    <td><span>estimates a solution for func(result) = val where result is the result of these function using halley algorythem</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="jpe.math.framework.algorythems.simpleFuncSolvers.html#brent" class="code" data-type="Function">brent</a></td>
+    <td><span>Seeks a minimum of a function via Brent's method.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="jpe.math.framework.algorythems.simpleFuncSolvers.html#general" class="code" data-type="Function">general</a></td>
+    <td><span>implementation of a genral aprocimation algorythem for fun, fun(result) = val, and c is the constant used</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="jpe.math.framework.algorythems.simpleFuncSolvers.html#_eps" class="code" data-type="Variable">_eps</a></td>
+    <td><span>epsilon value</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="jpe.math.framework.algorythems.simpleFuncSolvers.html#_golden" class="code" data-type="Variable">_golden</a></td>
+    <td><span>golden mean</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="jpe.math.framework.algorythems.simpleFuncSolvers.html#_intervallHalving" class="code" data-type="Function">_intervallHalving</a></td>
+    <td><span>intervall halving algorythem so that fun(result)=val, top and bottom is the top (bottom respectivly) value defaults to val but can alsow be a func taking val as a parameter</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="jpe.math.framework.algorythems.simpleFuncSolvers.inf">
+    
+  </a>
+  <a name="inf">
+    
+  </a>
+  <div class="functionHeader">
+    inf =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>infinity</p><p>a floating point number with value infinity</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="jpe.math.framework.algorythems.simpleFuncSolvers._eps">
+    
+  </a>
+  <a name="_eps">
+    
+  </a>
+  <div class="functionHeader">
+    _eps =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>epsilon value</p><p>the epsilon for the brent algorythem</p></div> (type: <code>float</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="jpe.math.framework.algorythems.simpleFuncSolvers._golden">
+    
+  </a>
+  <a name="_golden">
+    
+  </a>
+  <div class="functionHeader">
+    _golden =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>golden mean</p><p>the golden mean used for the brent algorythem</p></div> (type: <code>float</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="jpe.math.framework.algorythems.simpleFuncSolvers.testF">
+    
+  </a>
+  <a name="testF">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    testF(x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>demo function</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">x</td><td>the value to scan for (type: float)</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="jpe.math.framework.algorythems.simpleFuncSolvers.testdf">
+    
+  </a>
+  <a name="testdf">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    testdf(x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>derivative of demo function</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">x</td><td>the value to scan for (type: float)</td></tr></table></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="jpe.math.framework.algorythems.simpleFuncSolvers.functionType">
+    
+  </a>
+  <a name="functionType">
+    
+  </a>
+  <div class="functionHeader">
+    functionType =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>type of function</p><p>the datatye for functions, basikly it is used to scheck weather a variable contains a function</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="jpe.math.framework.algorythems.simpleFuncSolvers.neuton">
+    
+  </a>
+  <a name="neuton">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    neuton(fun, dfun, val=0, acc=5, start=None, maxIter=1000000, warn=False):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>seaks the position of a functon sothat the fun(result) = val where result is the output of this function using neuton algroythem</p><p>give it a function fun and its derivative dfun, as well as a value val at each step in the convergence it will substract (f(x)-val)/df(x) from x it will do this untill (f(x)-val)/df(x) is less than 1/10**acc or maxIter is reached if maxIter is reached and warn is True it will complain about not finding a solution it will than return a rounded version of the result</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">fun</td><td>the function the the algorythem runs on to find the result as described above is string function will be built as lambda x: eval(fun) (type: string or function)</td></tr><tr><td></td><td class="fieldArg">dfun</td><td>the derivative of fun is string function will be built as lambda x: eval(dfun) (type: function or string)</td></tr><tr><td></td><td class="fieldArg">val</td><td>the value the function must have at the end defaults to 0 (type: float optional)</td></tr><tr><td></td><td class="fieldArg">acc</td><td>the accuracy at witch the calculations stop in post comma digits (type: int otional)</td></tr><tr><td></td><td class="fieldArg">start</td><td>the starting value of the algorythem if float the starting value will be start if function it will run the function with parameter val and use the result witch must be a float, int, jfloat etc (type: function, float optional)</td></tr><tr><td></td><td class="fieldArg">maxIter</td><td>maximum amount of iterations allowed before function terminates and maybe raises warnings (type: int)</td></tr><tr><td></td><td class="fieldArg">warn</td><td>weather or not to raise a warning when code teminates du to max Iters reached (type: bool)</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">float best approximation found for func(result) = val</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="jpe.math.framework.algorythems.simpleFuncSolvers.intervallHalving">
+    
+  </a>
+  <a name="intervallHalving">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    intervallHalving(fun, val=0, acc=10, top=None, bottom=None, max_Iter=100000, warn=False):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>seaks the position of a functon sothat the fun(result) = val where result is the output of this function using the bisection algroythem</p><p>input a function and a avalu it shuld search as well as some definition of the search intervall contining a solution and it will return an approximation of that solution by halving the intervall betwean the values and finding out in witch set the solution is locatd</p><p>IMPORTANT: there must be a solution in [bottom:top] (or [top:bottom]) or a jpeCalculationError is raised</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">func</td><td>the function we are checking against if string function will be lambda x: eval(func) this function must be continous (type: function or string)</td></tr><tr><td></td><td class="fieldArg">val</td><td>the value the function must have at the end defaults to 0 (type: float)</td></tr><tr><td></td><td class="fieldArg">acc</td><td>the amount of postcomma digits we want to calculate to (type: int)</td></tr><tr><td></td><td class="fieldArg">top</td><td>the top of the section we are checking if ist a function the programm will use the result of that function as an input for top run parameters are(val) default is val aka if top is None the input will be val (type: float or function optional)</td></tr><tr><td></td><td class="fieldArg">bottom</td><td>the bottom of the secton we are checking if ist a function the programm will use the result of that function as an input for top run parameters are(val) default is val aka if top is None the input will be -val (type: float optional)</td></tr><tr><td></td><td class="fieldArg">max_Iters</td><td>the maximum amount of iterations (type: int)</td></tr><tr><td></td><td class="fieldArg">warn</td><td>weather to raise warnings (type: bool)</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">float best approximation for x so that fun(x) = val</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="jpe.math.framework.algorythems.simpleFuncSolvers.monteCarloBisektion">
+    
+  </a>
+  <a name="monteCarloBisektion">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    monteCarloBisektion(fun, val=0, acc=10, top=None, bottom=None, max_Iter=100000, warn=True, seed=None, sigma=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>seaks the position of a functon so that the fun(result) = val where result is the output of this function using the bisection algroythem with random elements</p><p>input a function and a avalu it shuld search as well as some definition of the search intervall contining a solution and it will return an approximation of that solution by spliting the intervall into random sizes and than finding out in witch set the solution is locatd</p><p>IMPORTANT: there must be a solution in [bottom:top] (or [top:bottom]) or a jpeCalculationError is raised</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">func</td><td>the function we are checking against if string function will be lambda x: eval(func) this function must be continous (type: function or string)</td></tr><tr><td></td><td class="fieldArg">val</td><td>the value the function must have at the end defaults to 0 (type: float)</td></tr><tr><td></td><td class="fieldArg">acc</td><td>the amount of postcomma digits we want to calculate to (type: int)</td></tr><tr><td></td><td class="fieldArg">top</td><td>the top of the section we are checking if ist a function the programm will use the result of that function as an input for top run parameters are(val) default is val aka if top is None the input will be val (type: float or function optional)</td></tr><tr><td></td><td class="fieldArg">bottom</td><td>the bottom of the secton we are checking if ist a function the programm will use the result of that function as an input for top run parameters are(val) default is val aka if top is None the input will be -val (type: float optional)</td></tr><tr><td></td><td class="fieldArg">max_Iters</td><td>the maximum amount of iterations (type: int optionoal)</td></tr><tr><td></td><td class="fieldArg">warn</td><td>weather to raise warnings (type: bool optional)</td></tr><tr><td></td><td class="fieldArg">seed</td><td>seed for randomness defaults to time.time() (type: int or None optional)</td></tr><tr><td></td><td class="fieldArg">sigma</td><td>sigma for guassean random if not None will use guassean else linear random distiribution (type: float or None optional)</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">float best approximation for x so that fun(x) = val</td></tr></table></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="jpe.math.framework.algorythems.simpleFuncSolvers._intervallHalving">
+    
+  </a>
+  <a name="_intervallHalving">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _intervallHalving(fun, val, acc=10, top=None, bottom=None, max_Iter=100000, warn=True, runAsMontecarlo=0, seed=None, sigma=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>intervall halving algorythem so that fun(result)=val, top and bottom is the top (bottom respectivly) value defaults to val but can alsow be a func taking val as a parameter</p><p>max_Iter is the maximum iteration number warn if func should raise warnings</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="jpe.math.framework.algorythems.simpleFuncSolvers.regulaFalsi">
+    
+  </a>
+  <a name="regulaFalsi">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    regulaFalsi(func, val=0, x1=None, x2=None, acc=10, maxIter=500, warn=False):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>estimates a solution for func(result) = val where result is the result of these function using regulaFalsi algorythem</p><p>will find 0 locations of a function by tracing a line (l) throw points (x1, func(x1)) and (x2, func(x2)) and than find the intersect of l and the x axis the interect is a point with coordinates (i, 0) than set x1 to x2 and x2, to i do this untill accurac is reaced or we run out of iteration length</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">func</td><td>the function checked against if func is a string the code generates a function of type lambda x: eval(func) (type: function or string)</td></tr><tr><td></td><td class="fieldArg">val</td><td>the value we want to check func for (type: float)</td></tr><tr><td></td><td class="fieldArg">x1</td><td>the xpos of the first point of the ray (type: float optional)</td></tr><tr><td></td><td class="fieldArg">x2</td><td>the xpos of the second point of the ray (type: float optional)</td></tr><tr><td></td><td class="fieldArg">acc</td><td>numper of post comma digits to calculate for (type: int optional)</td></tr><tr><td></td><td class="fieldArg">maxIter</td><td>maximum number of iterations before abbort (type: int)</td></tr><tr><td></td><td class="fieldArg">warn</td><td>if true we raise warning if abborted by max iters (type: bool)</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">float best approximation for x so that fun(x) = val</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="jpe.math.framework.algorythems.simpleFuncSolvers.halley">
+    
+  </a>
+  <a name="halley">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    halley(func, dfunc, ddfunc, val=0, init_x=None, acc=10, maxIter=1000000, warn=False):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>estimates a solution for func(result) = val where result is the result of these function using halley algorythem</p><p>given a function func, its derivative dfunc and the second derivative ddfunc we can find a solution for func(result) = val, we are looking for result to do this we use a similar aproche to the neuton algorythem except that conversion calculation is (2*func(x)*dfunc(x))/(2*dfunc(x)**2-func(x)*ddfunc(x)) rather than what is used by neuton</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">func</td><td>function we want to check agrainst if func is a string function is generated as lambda x: eval(func) (type: function, string)</td></tr><tr><td></td><td class="fieldArg">dfunc</td><td>derivative of the function we want to check agrainst if dfunc is a string function is generated as lambda x: eval(dfunc) (type: function, string)</td></tr><tr><td></td><td class="fieldArg">ddfunc</td><td>second derivative of the function we want to check agrainst if ddfunc is a string function is generated as lambda x: eval(ddfunc) (type: function, string)</td></tr><tr><td></td><td class="fieldArg">val</td><td>the value we want func(result) to have at the end (type: float)</td></tr><tr><td></td><td class="fieldArg">init_x</td><td>initial guess for the result (type: float)</td></tr><tr><td></td><td class="fieldArg">acc</td><td>number of post comma digits (type: int)</td></tr><tr><td></td><td class="fieldArg">maxIter</td><td>maximum number of iterations before abbort (type: int)</td></tr><tr><td></td><td class="fieldArg">warn</td><td>if true a warning is raised when max iter is reached (type: bool)</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">float the result ot the calculations so that func(result)=value</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="jpe.math.framework.algorythems.simpleFuncSolvers.brent">
+    
+  </a>
+  <a name="brent">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    brent(fun, a=(-inf), b=(+inf), val=0, x0=None, rtol=_eps, atol=_eps, maxiter=500, mode=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Seeks a minimum of a function via Brent's method.</p><p>Given a function ``f`` with a minimum in the interval ``a &lt;= b``, seeks a local minimum using a combination of golden section search and successive parabolic interpolation. Let ``tol = rtol * abs(x0) + atol``, where ``x0`` is the best guess found so far. It converges if evaluating a next guess would imply evaluating ``f`` at a point that is closer than ``tol`` to a previously evaluated one or if the number of iterations reaches maxiter.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">fun</td><td>Objective function to be minimized. or a string in witch case it will be turned into a function (type: function)</td></tr><tr><td></td><td class="fieldArg">a</td><td>Interval's lower limit. Defaults to ``-inf`` if it is a function: a is redefined as the output of the function with parameters val (type: float or function optional)</td></tr><tr><td></td><td class="fieldArg">b</td><td>Interval's upper limit. Defaults to ``+inf``. if it is a function: b is redefined as the output of the function with parameters val (type: float or function optional)</td></tr><tr><td></td><td class="fieldArg">val</td><td>Initial guess. Defaults to ``None``, which implies that:<pre class="literalblock">
+            x0 = a + 0.382 * (b - a)
+            f0 = f(x0)
+            if function x0 will be the result of that function with input (val)
+</pre> (type: float, function optional)</td></tr><tr><td></td><td class="fieldArg">rtol</td><td>Relative tolerance. Defaults to ``1.4902e-08``.</td></tr><tr><td></td><td class="fieldArg">atol</td><td>Absolute tolerance. Defaults to ``1.4902e-08``. (type: float)</td></tr><tr><td></td><td class="fieldArg">maxiter</td><td>Maximum number of iterations. (type: int)</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">float Best guess for x of the minimum, maximum,equalval to val of f, float value of generated function at position x, int iteration number</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="jpe.math.framework.algorythems.simpleFuncSolvers.general">
+    
+  </a>
+  <a name="general">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    general(func, val, c, x=0, acc=10, maxIter=1000, warn=False):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>implementation of a genral aprocimation algorythem for fun, fun(result) = val, and c is the constant used</p><p>given a function func we can find a solution for func(result) = value where result is the result of these calculations we can do this by substacting a multiple of func(x) from x</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">func</td><td>function we check against if string function is generated as lambda x: eval(func) (type: function, string)</td></tr><tr><td></td><td class="fieldArg">val</td><td>the value of the function at the end aka the value we want to get from func(result) (type: float)</td></tr><tr><td></td><td class="fieldArg">c</td><td>the number we multiply func(x) with for the approximation calculations (type: float)</td></tr><tr><td></td><td class="fieldArg">acc</td><td>ammount of post comma digits to calculate for (type: int)</td></tr><tr><td></td><td class="fieldArg">maxIter</td><td>maximum amount of iterations before abort (type: int)</td></tr><tr><td></td><td class="fieldArg">warn</td><td>if true a warning is raised when max iter is reached (type: bool)</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">float the result ot the calculations so that func(result)=val</td></tr></table></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for jpe, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> at 2020-12-01 13:10:49.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>
